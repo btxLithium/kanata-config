@@ -93,7 +93,7 @@
 
   ;; ======= symbols =======
   ,? (tap-hold  $tap-time 100 (macro , spc)  S-/)
-  ' (tap-dance 155 (C-tab '))   
+  ' (tap-dance 155 (M-v '))   
   :/ (tap-hold  $tap-time 90 S-; /) 
   < (fork  S-, S-. (lsft rsft))
 
