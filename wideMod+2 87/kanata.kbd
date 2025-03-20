@@ -10,7 +10,7 @@ esc grv 1    2    3    4    5      6 7     8    9    0    -    = bspc           
   tab   q    w    e    r    t      y u     i    o    p    [    ]    \           del   pgdn
    caps  a    s    d    f    g     h j      k    l    ;    '    ret
      lsft  z    x    c    v    b   n m       ,    .    /    rsft           up
-      lctrl                 lalt   spc   ralt            rctrl       left down right
+      lctrl                 lalt   spc   ralt                         left down right
 )
 
 (defchordsv2
@@ -33,14 +33,14 @@ M-v '   1    2    3    4    5      ✗ ✗     6    7    8    9    0 grv        
   tab   q    w    f    @r   g      ✗ ✗     j    l    u    y    @:/  [           f18   f20
    lctrl a    @o   s    t    d     home ✗      h    n    e    i    p
      z     @x   c    v    b    \   end ✗       k    m    @,?  f15            S-up
-      @3mltp                f13    @spc  @rsft           _           S-left S-down S-right
+      @3mltp                f13    @spc  @rsft                        S-left S-down S-right
 )
 (deflayer nomods
 M-v '   1    2    3    4    5      ✗ ✗     6    7    8    9    0 grv            _     _
   tab   q    w    f    r    g      ✗ ✗     j    l    u    y    ,    [           _     _
    lctrl a    o    s    t    d     ✗ ✗      h    n    e    i    p
      z     x    c    v    b    \   ✗ ✗       k    m    ,    rsft           _
-      _                     _      spc   rsft            _           _    _    _
+      _                     _      spc   rsft                         _    _    _
 )
 
 (deflayer layer1
@@ -48,21 +48,21 @@ M-v '   1    2    3    4    5      ✗ ✗     6    7    8    9    0 grv        
   _     _    _    C-f  C-r  C-g    _ _     S-8  -    =    @<   S-7  S-6         _     _
    _     C-a  _    C-s  C-t  C-d   _ _      left down up   right ;
      C-z   _    C-c  C-v  C-b  _   _ _       S-0  ret  ]    S-]            _
-      _                     _      _     C-bspc          _           _    _    _
+      _                     _      _     C-bspc                       _    _    _
 )
 (deflayer layer2
  _   _   _    _    _    _    _      ✗ ✗     _    _    _    _    _ _              _     _
   _     _    _    _    _    _      ✗ ✗     _    _    @ü   _    _    _           _     _
    _     @ä   @ö   @ss  _    _     ✗ ✗      _    _    _    _    _
      _     _    _    _    _    _   ✗ ✗       _    _    _    _              _
-      _                     _      _     _               _           _    _    _
+      _                     _      _     _                            _    _    _
 )
 (defvar
   tap-time 200
   hold-time 255
 
   R-early-tap-keys (
-     q         e    r    t      y u     i    o    p    [    ]    \   
+     q    w    e    r    t      y u     i    o    p    [    ]    \   
       a    s    d    f    g     h j      k    l    ;    '    ret
         z    x    c    v    b   n m       ,    .    /    rsft
   )
@@ -101,6 +101,6 @@ M-v '   1    2    3    4    5      ✗ ✗     6    7    8    9    0 grv        
   ;;  ======= Others =======
   x (tap-dance 165 (x C-x))   
   rsft (tap-hold $tap-time 150 bspc rsft) ;; backspace
-  spc (fork spc tab (lctrl)) ;; ctrl-tab
+  spc (fork spc tab (lctrl lalt)) 
   3mltp (macro mltp mltp mltp)
 )
