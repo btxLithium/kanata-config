@@ -32,8 +32,8 @@
   @'    1    2    3    4    5      ✗ ✗     6    7    8    9    0 grv            f17   f19
   tab   q    w    f    @r   g      ✗ ✗     j    l    u    y    @:/  [           f18   f20
    lctrl a    @o   s    t    d     home ✗      h    n    e    i    p
-     @z    @x   c    v    b    \   end ✗       k    m    @,?  f15            S-up
-      @3mltp                f13    spc   @rsft           _           S-left S-down S-right
+     z     @x   c    v    b    \   end ✗       k    m    @,?  f15            S-up
+      @3mltp                f13    @spc  @rsft           _           S-left S-down S-right
 )
 (deflayer nomods
   '     1    2    3    4    5      ✗ ✗     6    7    8    9    0 grv            _     _
@@ -45,10 +45,10 @@
 
 (deflayer layer1
   _     _    _    _    _    _      _ _     _    _    _    _    _ _              _     _
-  C-tab _    _    C-f  C-r  C-g    _ _     S-8  -    =    @<   S-7  S-6         _     _
+  _     _    _    C-f  C-r  C-g    _ _     S-8  -    =    @<   S-7  S-6         _     _
    _     C-a  _    C-s  C-t  C-d   _ _      left down up   right ;
      C-z   _    C-c  C-v  C-b  _   _ _       S-0  ret  ]    S-]            _
-      _                     _      C-spc C-bspc          _           _    _    _
+      _                     _      _     C-bspc          _           _    _    _
 )
 (deflayer layer2
  _     _    _    _    _    _      ✗ ✗     _    _    _    _    _ _              _     _
@@ -62,7 +62,7 @@
   hold-time 255
 
   R-early-tap-keys (
-     q    w    e    r    t      y u     i    o    p    [    ]    \   
+     q         e    r    t      y u     i    o    p    [    ]    \   
       a    s    d    f    g     h j      k    l    ;    '    ret
         z    x    c    v    b   n m       ,    .    /    rsft
   )
@@ -84,12 +84,11 @@
   ss (macro A-(kp2  kp2  kp3))
   ä  (macro A-(kp2  kp2  kp8))
   ö  (macro A-(kp2  kp4  kp6))
-  ü  (macro A-(kp2  kp5  kp2))
+  ü  (macro A-(kp2  kp5  kp2)) ;; > w w KKo  oo
 
   ;; ======= Layers and Modifiers =======
   o  (tap-hold-release $tap-time 200 (multi o @tap) (layer-while-held layer1))
   r  (tap-hold-release-keys $tap-time 200 (multi r @tap) lalt $R-early-tap-keys)
-  z  (tap-hold-release-keys $tap-time 200 (multi z @tap) lmeta $R-early-tap-keys)
 
   ;; ======= symbols =======
   ,? (tap-hold  $tap-time 100 (macro , spc)  S-/)
@@ -101,6 +100,7 @@
 
   ;;  ======= Others =======
   x (tap-dance 165 (x C-x))   
-  rsft (tap-hold $tap-time 150 bspc rsft)
+  rsft (tap-hold $tap-time 150 bspc rsft) ;; backspace
+  spc (fork spc tab (lctrl))
   3mltp (macro mltp mltp mltp)
 )
