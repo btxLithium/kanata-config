@@ -29,7 +29,7 @@ esc grv 1    2    3    4    5      6 7     8    9    0    -    = bspc           
 
 
 (deflayer base
-M-v '   1    2    3    4    5      ✗ ✗     6    7    8    9    0 grv            f17   f19
+M-v '   1    2    3    4    5      f16 ✗     6    7    8    9    0 grv            f17   f19
   tab   q    w    f    @r   g      ✗ ✗     j    l    u    y    @:/  [           f18   f20
    lctrl a    @o   s    t    d     home ✗      h    n    e    i    p
      z     @x   c    v    b    \   end ✗       k    m    @,?  f15            S-up
@@ -92,7 +92,7 @@ M-v '   1    2    3    4    5      ✗ ✗     6    7    8    9    0 grv        
 
   ;; ======= symbols =======
   ,? (tap-hold  $tap-time 100 (macro , spc)  S-/)
-  ' (tap-dance 155 (M-v '))   
+  ' (tap-dance 155 (' M-v))    ;; only for 61 layout
   :/ (tap-hold  $tap-time 90 S-; /) 
   < (fork  S-, S-. (lsft rsft))
 
