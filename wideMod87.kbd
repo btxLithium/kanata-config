@@ -29,7 +29,7 @@ esc grv 1    2    3    4    5      6 7     8    9    0    -    = bspc           
 
 
 (deflayer base
-M-v '   1    2    3    4    5      f16 ✗     6    7    8    9    0 grv            f17   f19
+M-v '   1    2    3    4    5      @6 ✗     6    7    8    9    0 grv            f17   f19
   tab   q    w    f    @r   g      ✗ ✗     j    l    u    y    @:/  [           f18   f20
    lctrl a    @o   s    t    d     home ✗      h    n    e    i    p
      z     @x   c    v    b    \   end ✗       k    m    @,?  f15            S-up
@@ -97,8 +97,9 @@ M-v '   1    2    3    4    5      ✗ ✗     6    7    8    9    0 grv        
   < (fork  S-, S-. (lsft rsft))
 
   grv (tap-dance 185 (grv (layer-while-held layer2)))   
-
+ 
   ;;  ======= Others =======
+  6 (tap-dance 155 (C-S-a C-S-6))
   x (tap-dance 165 (x C-x))   
   rsft (tap-hold $tap-time 150 bspc rsft) ;; backspace
   spc (fork spc tab (lctrl lalt)) 

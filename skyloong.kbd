@@ -13,12 +13,17 @@
      lctrl                lalt    spc ralt                             left  down right
 )
 
-(defchordsv2-experimental
+(defchordsv2
   (d f)  del     65 first-release  ()    ;; ST Delete 
   (d k)  S-9     65 first-release  ()    ;; SN Left paratheses
   (f k)  esc     65 first-release  ()    ;; TN Escape
-  (k p)   .    85 first-release  ()      ;; NY Dot/Period
+  
+  ;; (w k)  C-tab    65 first-release  ()   
   (w e)  A-tab    65 first-release  ()   
+  ;; (w p)  C-tab    65 first-release  ()   
+  ;; (k e)   .    85 first-release  ()      ;; NY Dot/Period
+  (k p)   .    85 first-release  ()      ;; NY Dot/Period 
+  ;; (e p)   .    85 first-release  ()      ;; NY Dot/Period
 
 )
 
