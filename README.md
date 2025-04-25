@@ -39,6 +39,14 @@ This is a repository of my kanata config files for [Kanata](https://github.com/j
 
 ---
 ### How to use
+Review or modify `run_and_load.bat` to specify the config file(s) you want to load. Make sure your `.kbd` config(s) are placed in the same directory like this: 
+```
+YourFolder/
+├── katata_gui.exe
+├── a.kbd
+├── b.kbd
+└── run_and_load.bat
+```
 
-Just place the `kanata.kbd` into your Kanata dotfile directory (usually `~/.config/kanata`) and follow the [Usage section](https://github.com/jtroo/kanata?tab=readme-ov-file#usage) on [Kanata's GitHub](https://github.com/jtroo/kanata) to get it running in the background.
+Visit [Usage section](https://github.com/jtroo/kanata?tab=readme-ov-file#usage) on [Kanata's GitHub](https://github.com/jtroo/kanata) for more info
 
