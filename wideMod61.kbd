@@ -6,63 +6,63 @@
 )
 
 (defsrc
-  esc   1    2    3    4    5      6 7     8    9    0    -    = bspc           ins   pgup
-  tab   q    w    e    r    t      y u     i    o    p    [    ]    \           del   pgdn
-   caps  a    s    d    f    g     h j      k    l    ;    '    ret
-     lsft  z    x    c    v    b   n m       ,    .    /    rsft           up
-      lctrl                 lalt   spc   ralt            rctrl       left down right
+  esc   1    2    3    4    5      6    7      8    9    0    -    =  bspc        ins   
+  tab   q    w    e    r    t      y    u      i    o    p    [    ]    \         del   
+   caps  a    s    d    f    g     h    j       k    l    ;    '    ret           pgup
+     lsft  z    x    c    v    b   n    m        ,    .    /    rsft         up   pgdn
+      lctrl     lmeta        lalt   spc    ralt            rctrl        left down right
 )
 
 (defchordsv2
-  (d f)  del     65 first-release  ()    ;; ST Delete 
-  (d l)  S-9     65 first-release  ()    ;; SN Left paratheses
-  (f l)  esc     65 first-release  ()    ;; TN Escape
+  (d f)  del   65 first-release  ()    ;; [S T] Delete 
+  (d l)  S-9   65 first-release  ()    ;; [S N] Left paratheses
+  (f l)  esc   65 first-release  ()    ;; [T N] Escape
 
-  ;; (w l)  C-tab    65 first-release  ()   
-  (w e)  A-tab    65 first-release  ()   
-  ;; (w [)  C-tab    65 first-release  ()   
-  ;; (l e)   .    85 first-release  ()      ;; NY Dot/Period
-  (l [)   .    85 first-release  ()      ;; NY Dot/Period 
-  ;; (e [)   .    85 first-release  ()      ;; NY Dot/Period
+  ;; (w l)  A-?    65 first-release  ()   ;;
+  ;; (w e)  A-a    65 first-release  ()   ;; [W E] Dance: select whole object
+  (w [)  A-;    65 first-release  ()   ;; [W F] Dance: swap anchor
+  (e l)   S-,    85 first-release  ()  ;;    <
+  (e [)   S-.    85 first-release  ()  ;;    >
+  (l [)   .    85 first-release  ()      ;; [N Y] Dot/Period 
 
 )
 
 
 (deflayer base
-  @'    1    2    3    4    5      ✗ ✗     6    7    8    9    0 grv            f17   f19
-  tab   q    w    f    @r   g      ✗ ✗     j    l    u    y    @:/  [           f18   f20
-   lctrl a    @o   s    t    d     home ✗      h    n    e    i    p
-     z     @x   c    v    b    \   end ✗       k    m    @,?  f15            S-up
-      @3mltp                f13    @spc  @rsft           _           S-left S-down S-right
+  '     1    2    3    4    5      @6   ✗      6    7    8    9    0  grv         f17
+  tab   q    w    f    @r   g      ✗    ✗      j    l    u    y    @:/  [         f18
+   lctrl a    @o   s    t    d     home ✗       h    n    e    i    p             f19
+     z     @x   c    v    b    \   end  ✗        k    m    @,?  lmeta        f21  f20
+      ✗         ✗            @3mltp @spc   @rsft           _            f22  f23  f24
 )
 (deflayer nomods
-  '     1    2    3    4    5      ✗ ✗     6    7    8    9    0 grv            _     _
-  tab   q    w    f    r    g      ✗ ✗     j    l    u    y    ,    [           _     _
-   lctrl a    o    s    t    d     ✗ ✗      h    n    e    i    p
-     z     x    c    v    b    \   ✗ ✗       k    m    ,    rsft           _
-      _                     _      spc   rsft            _           _    _    _
+  '     1    2    3    4    5      _    ✗      6    7    8    9    0  grv         f17
+  tab   q    w    f    r    g      _    ✗      j    l    u    y    @:/  [         f18
+   lctrl a    o    s    t    d     home ✗       h    n    e    i    p             f19
+     z     x    c    v    b    \   end  ✗        k    m    @,?  lmeta        f21  f20
+      _         ✗            _      spc    bspc            _            f22  f23  f24
 )
 
 (deflayer layer1
-  _     _    _    _    _    _      _ _     _    _    _    _    _ _              _     _
-  _     _    _    C-f  C-r  C-g    _ _     S-8  -    =    @<   S-7  S-6         _     _
-   _     C-a  _    C-s  C-t  C-d   _ _      left down up   right ;
-     C-z   _    C-c  C-v  C-b  _   _ _       S-0  ret  ]    S-]            _
-      _                     _      _     C-bspc          _           _    _    _
+  _     _    _    _    _    _      _    _      _    _    _    _    _  _           _
+  _     _    _    C-f  C-r  C-g    _    _      S-8  -    =    @osa S-7  S-6       _
+   _     C-a  _    C-s  C-t  C-d   _    _       left down up   right ;             _
+     C-z   _    C-c  C-v  C-b  _   _    _        S-0  ret  ]    S-]          _    _
+      _         ✗            _      _      C-bspc          _            _    _    _
 )
 (deflayer layer2
- _     _    _    _    _    _      ✗ ✗     _    _    _    _    _ _              _     _
-  _     _    _    _    _    _      ✗ ✗     _    _    @ü   _    _    _           _     _
-   _     @ä   @ö   @ss  _    _     ✗ ✗      _    _    _    _    _
-     _     _    _    _    _    _   ✗ ✗       _    _    _    _              _
-      _                     _      _     _               _           _    _    _
+  esc   _    _    _    _    _      _    _      _    _    _    _    _  _           _
+  tab   _    _    _    _    _      _    _      _    _    @ü   _    _    _         _
+   _     @ä   @ö   @ss  _    _     _    _       _    _    _    _    _             _
+     lsft  _    _    _    _    _   _    _        _    _    _    rsft         _    _
+      _         ✗            _      _      _               _            _    _    _
 )
 (defvar
   tap-time 200
   hold-time 255
 
   R-early-tap-keys (
-     q         e    r    t      y u     i    o    p    [    ]    \   
+     q    w    e    r    t      y u     i    o    p    [    ]    \   
       a    s    d    f    g     h j      k    l    ;    '    ret
         z    x    c    v    b   n m       ,    .    /    rsft
   )
@@ -84,7 +84,7 @@
   ss (macro A-(kp2  kp2  kp3))
   ä  (macro A-(kp2  kp2  kp8))
   ö  (macro A-(kp2  kp4  kp6))
-  ü  (macro A-(kp2  kp5  kp2)) ;; > w w KKo  oo
+  ü  (macro A-(kp2  kp5  kp2)) 
 
   ;; ======= Layers and Modifiers =======
   o  (tap-hold-release $tap-time 200 (multi o @tap) (layer-while-held layer1))
@@ -92,15 +92,15 @@
 
   ;; ======= symbols =======
   ,? (tap-hold  $tap-time 100 (macro , spc)  S-/)
-  ' (tap-dance 155 (M-v '))   
   :/ (tap-hold  $tap-time 90 S-; /) 
-  < (fork  S-, S-. (lsft rsft))
 
-  grv (tap-dance 185 (grv (layer-while-held layer2)))   
+  grv (tap-dance 185 (grv (one-shot 1800 (layer-while-held layer2)))) ;; double-tap to one-shot to layer2
 
   ;;  ======= Others =======
+  6 A-S-C-v
   x (tap-dance 165 (x C-x))   
   rsft (tap-hold $tap-time 150 bspc rsft) ;; backspace
-  spc (fork spc tab (lctrl))
+  spc (fork spc tab (lctrl)) ;; ctrl-space as ctrl-tab
   3mltp (macro mltp mltp mltp)
+  osa (one-shot 1500 ralt)
 )

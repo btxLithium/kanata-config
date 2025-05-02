@@ -10,8 +10,8 @@
   '
   tab   q    w    e    r    t             y    u     i    o    p    [ 
         a    s    d    f    g             h    j     k    l    ;    
-        z    x    c    v    b             n    m     ,    .   
-                         spc               rsft
+        z    x    c    v    b             n    m     ,    
+                   lalt   spc               rsft
 )
 
 
@@ -20,43 +20,43 @@
   (d j)  S-9     65 first-release  ()    ;; SN Left paratheses 
   (f j)  esc     65 first-release  ()    ;; TN Escape
 
-  ;; (w e)  A-tab    65 first-release  ()   
   ;; (w j)  C-tab    65 first-release  ()   
-  ;; (w o)   .    85 first-release  ()      ;; NY Dot/Period
-  ;; (j e)  C-tab    65 first-release  ()   
+  (w e)  A-.    65 first-release  ()   ;; [W E] Dance:  repeat last object or *f*/*t* selection command
+  (w o)  A-;    85 first-release  ()   ;; [W F] Dance: swap anchor
+  (e j)  S-,    85 first-release  ()   ;;    <   
+  (e o)  S-.    65 first-release  ()   ;;    >
   (j o)   .    85 first-release  ()      ;; NY Dot/Period 
-  ;; (e o)   .    85 first-release  ()      ;; NY Dot/Period
 )
 
 (deflayer base 
-  @'
+  '
   tab   q    w    f    @r   g             j    l     u    y    @:/  [
         a    @o   s    t    d             h    n     e    i    p
-        z    @x   c    v    b             k    m     @,?  A-Enter
-                         @spc              @rsft
+        z    @x   c    v    b             k    m     @,?
+                   @meh   @spc              @rsft
 )
 (deflayer nomods
   '
   tab   q    w    f    r    g             j    l     u    y    ,    [
         a    o    s    t    d             h    n     e    i    p
-        z    x    c    v    b             k    m     ,    .
-                         spc               rsft
+        z    x    c    v    b             k    m     ,
+                   _      spc               rsft
 )
 
 (deflayer layer1
   _
-  _     C-q  _    C-f  C-p  C-g           S-8  -     =    @<   S-7  S-6
+  _     C-q  _    C-f  C-p  C-g           S-8  -     =    @osa S-7  S-6
         C-a  _    C-s  C-t  C-d           left down  up   right ;
-        C-z  _    C-c  C-v  C-b           S-0  ret   ]    S-]
-                         _                 C-bspc
+        C-z  _    C-c  C-v  C-b           S-0  ret   ]
+                   _      _                 C-bspc
 )
 
 (deflayer layer2
   _
   _     _    _    _    _    _             _    _     @ü   _    _    _
         @ä   @ö   @ss  _    _             _    _     _    _    _
-        _    _    _    _    _             _    _     _    _
-                         _                 _
+        _    _    _    _    _             _    _     _
+                   _      _                 _
 )
 (defvar
   tap-time 200
@@ -93,16 +93,15 @@
 
   ;; ======= symbols =======
   ,? (tap-hold  $tap-time 100 (macro , spc)  S-/)
-  ' (tap-dance 155 (' M-v))    ;; only for 61 layout
   :/ (tap-hold  $tap-time 90 S-; /) 
-  < (fork  S-, S-. (lsft rsft))
 
- 
- 
+  grv (tap-dance 185 (grv (one-shot 1800 (layer-while-held layer2)))) ;; double-tap to one-shot to layer2
+
   ;;  ======= Others =======
- 
+  meh A-S-C-v
   x (tap-dance 165 (x C-x))   
   rsft (tap-hold $tap-time 150 bspc rsft) ;; backspace
-  spc (fork spc tab (lctrl lalt)) 
- 
+  spc (fork spc tab (lctrl)) ;; ctrl-space as ctrl-tab
+
+  osa (one-shot 1500 ralt)
 )
