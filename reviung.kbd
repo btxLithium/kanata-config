@@ -45,7 +45,7 @@
 
 (deflayer layer1
   _
-  _     C-q  _    C-f  C-p  C-g           S-8  -     =    @osa S-7  S-6
+  _     C-q  _    C-f  C-r  C-g           S-8  -     =    @osa S-7  S-6
         C-a  _    C-s  C-t  C-d           left down  up   right ;
         C-z  _    C-c  C-v  C-b           S-0  ret   ]
                    _      _                 C-bspc
@@ -63,7 +63,7 @@
   hold-time 255
 
   R-early-tap-keys (
-     q    w    e    r    t      y u     i    o    p    [    ]    \   
+     q        e    r    t      y u     i    o    p    [    ]    \   
       a    s    d    f    g     h j      k    l    ;    '    ret
         z    x    c    v    b   n m       ,    .    /    rsft
   )

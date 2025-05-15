@@ -45,7 +45,7 @@
 
 (deflayer layer1
   _     _    _    _    _    _      _    _      _    _    _    _    _  _           _
-  _     _    _    C-f  C-r  C-g    _    _      S-8  -    =    @osa S-7  S-6       _
+  _     _    _    C-f  C-r  C-g    _    _      S-8  -    =    M-v  S-7  S-6       _
    _     C-a  _    C-s  C-t  C-d   _    _       left down up   right ;             _
      C-z   _    C-c  C-v  C-b  _   _    _        S-0  ret  ]    S-]          _    _
       _         ✗            _      _      C-bspc          _            _    _    _
@@ -62,7 +62,7 @@
   hold-time 255
 
   R-early-tap-keys (
-     q    w    e    r    t      y u     i    o    p    [    ]    \   
+     q         e    r    t      y u     i    o    p    [    ]    \   
       a    s    d    f    g     h j      k    l    ;    '    ret
         z    x    c    v    b   n m       ,    .    /    rsft
   )
@@ -102,5 +102,5 @@
   rsft (tap-hold $tap-time 150 bspc rsft) ;; backspace
   spc (fork spc tab (lctrl)) ;; ctrl-space as ctrl-tab
   3mltp (macro mltp mltp mltp)
-  osa (one-shot 1500 ralt)
+
 )
